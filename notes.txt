@@ -1,0 +1,12 @@
+Create react 
+ npm create vite@latest
+     project name = ./ 
+     package nane : mern2-0-lms
+ ls so the files shows up 
+Install npm 
+     npm install 
+Install tailwind 
+     Follow the direction from tailwind website
+
+Install tailwind extension in vscode 
+     tailwind css intelliSense
