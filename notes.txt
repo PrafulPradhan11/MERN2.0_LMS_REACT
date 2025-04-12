@@ -9,9 +9,12 @@ Install tailwind
      Follow the direction from tailwind website
 Install tailwind extension in vscode 
      tailwind css intelliSense
-     
+
 Instal react-router-dom
      npm i react-router-dom
 
 Instal axios
   npm install axios
+
+CROS Error
+ 
