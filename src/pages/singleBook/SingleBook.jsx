@@ -26,6 +26,7 @@ const SingleBook = () => {
     <p className="text-gray-700 text-base">Author Name: {book.authorName} </p>
     <p className="text-gray-700 text-base">Published At: {book.publishedAt}</p>
   </div>
+  <button className='bg-blue-300 p-4'> Delete</button>
      </>
   )
 }
