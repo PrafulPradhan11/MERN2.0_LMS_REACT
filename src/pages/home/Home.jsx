@@ -15,7 +15,7 @@ const Home = () => {
   useEffect (()=>{
       fetchBooks()
   },[])
-  console.log(books)
+  
   return (
     <>
     <Navbar/>
