@@ -19,7 +19,7 @@ const SingleBook = () => {
   },[])
 
   const deleteBook = async()=>{
-    const response = await axios.delete(`https://mern2-0-basicnode-7zq5.onrender.com//book/${id}`)
+    const response = await axios.delete(`https://mern2-0-basicnode-7zq5.onrender.com/book/${id}`)
     if (response.status === 200 ){
       navigate('/')
     } else {
