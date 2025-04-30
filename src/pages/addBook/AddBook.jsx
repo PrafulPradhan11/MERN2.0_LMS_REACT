@@ -70,13 +70,13 @@ const handleSubmit = async (e)=>{
   })
   formData.append('image',image)
 
-  const response = await axios.post("http://localhost:3000/book",formData)
+  const response = await axios.post("https://mern2-0-basicnode-7zq5.onrender.com/book",formData)
   if(response.status === 201){
     navigate("/")
   } else{
     alert("Something went wrong")
   }
-  
+
 }
 
   return (

@@ -9,7 +9,7 @@ const SingleBook = () => {
 
   const [book,setBook] = useState({})
   const fetchBook = async ()=>{
-    const response = await axios.get(`http://localhost:3000/book/${id}`)
+    const response = await axios.get(`https://mern2-0-basicnode-7zq5.onrender.com/${id}`)
     if(response.status === 200){
       setBook(response.data.data)
     }
@@ -19,7 +19,7 @@ const SingleBook = () => {
   },[])
 
   const deleteBook = async()=>{
-    const response = await axios.delete(`http://localhost:3000/book/${id}`)
+    const response = await axios.delete(`https://mern2-0-basicnode-7zq5.onrender.com//book/${id}`)
     if (response.status === 200 ){
       navigate('/')
     } else {
