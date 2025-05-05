@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import Navbar from '../components/Navbar'
+import { backendUrl } from '../config'
 
 
 
@@ -35,7 +36,7 @@ const handleSubmit = async (e)=>{
   })
   formData.append('image',image)
 
-  const response = await axios.patch("https://mern2-0-basicnode-7zq5.onrender.com/book/" + id,formData)
+  const response = await axios.patch(`${backendUrl}/book/id`,formData)
   if(response.status === 200){
     navigate("/book/" + id)
   } else{
@@ -44,7 +45,7 @@ const handleSubmit = async (e)=>{
 }
 
 const fetchBook = async()=>{
- const response = await axios.get("https://mern2-0-basicnode-7zq5.onrender.com/book/" + id)
+ const response = await axios.get(`${backendUrl}/book/id`)
  if(response.status === 200){
   setData(response.data.data)
  }

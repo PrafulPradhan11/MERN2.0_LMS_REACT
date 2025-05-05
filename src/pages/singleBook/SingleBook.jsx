@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
 import { Link, useParams, useNavigate} from 'react-router-dom'
 import axios from 'axios'
+import { backendUrl } from '../config'
 
 const SingleBook = () => {
   const {id} =  useParams()
@@ -9,7 +10,7 @@ const SingleBook = () => {
 
   const [book,setBook] = useState({})
   const fetchBook = async ()=>{
-    const response = await axios.get(`https://mern2-0-basicnode-7zq5.onrender.com/book/${id}`)
+    const response = await axios.get(`${backendUrl}/book/${id}`)
     if(response.status === 200){
       setBook(response.data.data)
     }
@@ -19,7 +20,7 @@ const SingleBook = () => {
   },[])
 
   const deleteBook = async()=>{
-    const response = await axios.delete(`https://mern2-0-basicnode-7zq5.onrender.com/book/${id}`)
+    const response = await axios.delete(`${backendUrl}/book/${id}`)
     if (response.status === 200 ){
       navigate('/')
     } else {
